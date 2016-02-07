@@ -11,6 +11,7 @@ colnames(ElPowCon)= var.names
 # open png device
 png(filename = "plot1.png", width = 480, height = 480)
 
+par(bg='transparent')
 with(ElPowCon, hist(Global_active_power, col="red", main="Global Active Power", xlab="Global Active Power (kilowatts)"))
 
 # close png device

@@ -16,6 +16,7 @@ ElPowCon$DateTime=strptime(paste(ElPowCon$Date,ElPowCon$Time),"%d/%m/%Y %H:%M:%S
 # open png device
 png(filename = "plot3.png", width = 480, height = 480)
 
+par(bg='transparent')
 with(ElPowCon, plot(DateTime,Sub_metering_1, type="l", xlab="", ylab="Energy sub metering"))
 with(ElPowCon, lines(DateTime,Sub_metering_2, col="red"))
 with(ElPowCon, lines(DateTime,Sub_metering_3, col="blue"))

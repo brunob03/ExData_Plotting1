@@ -16,6 +16,7 @@ ElPowCon$DateTime=strptime(paste(ElPowCon$Date,ElPowCon$Time),"%d/%m/%Y %H:%M:%S
 # open png device
 png(filename = "plot2.png", width = 480, height = 480)
 
+par(bg='transparent')
 with(ElPowCon, plot(DateTime,Global_active_power, type="l", xlab="", ylab="Global Active Power (kilowatts)"))
 
 # close png device
